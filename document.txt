@@ -1,0 +1,68 @@
+University of Eloued
+Faculty of economy and management science
+Specialty: accounting and audit
+Dr / Atmane medini
+2025/2026
+
+_________Stationarity Lector
+
+1. Introduction
+Stationarity is a fundamental concept in time series econometrics. Many econometric models such as ARIMA, VAR, and regression models require the variables to be stationary in order to produce reliable statistical inference. A stationary time series has constant statistical properties over time, particularly its mean, variance, and autocovariance. When a series is non-stationary, shocks may have permanent effects and the statistical relationships between variables may become misleading.
+
+2. Concept of Stationarity
+A time series is said to be stationary if its statistical properties do not change over time. Formally, a stochastic process Y(t) is stationary when:
+  E(Yt) = μ (constant mean)
+Var(Yt) = σ² (constant variance)
+Cov(Yt , Yt−k) = γk (autocovariance depends only on the lag k)
+In practice, many economic variables such as GDP, prices, exchange rates, and stock indices exhibit trends and are therefore non-stationary.
+
+3 .Unit Root and Non-Stationarity
+Non-stationary series often contain a unit root. A simple representation of a unit root process is:
+                                 Yt = ρYt−1 + εt
+If:
+                       ρ = 1 → the series has a unit root and is non-stationary
+ |                      ρ| < 1 → the series is stationary
+Testing for the presence of a unit root is therefore essential before estimating econometric models.
+
+
+4 .Stationarity Tests
+Several statistical tests are used to determine whether a time series is stationary.
+
+4.1 Augmented Dickey–Fuller Test (ADF(
+The Augmented Dickey–Fuller test is one of the most widely used methods to detect unit roots. It extends the basic Dickey–Fuller test by including lagged differences to correct for serial correlation.
+Hypotheses:
+                    H0 : The series has a unit root (non-stationary)
+                    H1 : The series is stationary
+
+Decision rule:
+  p-value ≤ 0.05 → Reject H0 → Stationary
+  p-value > 0.05 → Fail to reject H0 → Non-stationary
+
+4.2 Phillips–Perron Test (PP(
+The Phillips–Perron test is another widely used unit root test. Unlike the ADF test, it corrects for serial correlation and heteroskedasticity using non-parametric statistical methods rather than adding lagged difference terms.
+Hypotheses:
+                      H0 : The series contains a unit root (non-stationary)
+                      H1 : The series is stationary
+Both ADF and PP tests are frequently used together in empirical studies to ensure robustness of the stationarity results.
+
+5 .Transformation of Non-Stationary Series
+When a time series is found to be non-stationary, transformations are often applied to stabilize its statistical properties. Two common transformations are the logarithmic transformation and differencing.
+
+5.1 Logarithmic Transformation
+The logarithmic transformation is commonly applied to economic variables such as GDP, prices, or stock indices to stabilize variance and interpret changes in relative terms.
+The logarithmic transformation is defined as:
+                               Zt = log(Yt(
+This transformation often reduces heteroskedasticity and allows economic interpretation in terms of growth rates.
+5.2 First Differencing
+Differencing is one of the most common methods used to remove trends and achieve stationarity. The first difference of a time series is defined as:
+                         ΔYt = Yt − Yt−1
+If the first difference of the series is stationary, the original series is said to be integrated of order one, denoted as:
+                              Yt ~ I(1(
+5.3 Log-Differencing
+In many empirical applications, both transformations are combined. Taking the difference of the logarithm approximates the growth rate of a variable.
+                         Δ log(Yt) = log(Yt) − log(Yt−1)
+This transformation is widely used in macroeconomics and finance to analyze percentage changes over time.
+
+6 .Conclusion
+Testing for stationarity is a crucial preliminary step in time series econometric analysis. Unit root tests such as the Augmented Dickey–Fuller and Phillips–Perron tests help determine whether a variable is stationary or requires transformation. When non-stationarity is detected, transformations such as logarithmic scaling and differencing are applied to stabilize the series. Ensuring stationarity improves the reliability of econometric models and prevents misleading statistical results.
+
